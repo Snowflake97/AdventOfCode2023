@@ -1,3 +1,5 @@
+from CommonTools.DataReader import read_from_file
+
 import re
 
 digits_to_value_dict = {
@@ -32,12 +34,6 @@ def get_number_from_code(code):
     first = digit_positions_dict[min(digit_positions_dict.keys())]
     last = digit_positions_dict[max(digit_positions_dict.keys())]
     return str(first) + str(last)
-
-
-def read_from_file(filename):
-    with open(filename, 'r') as f:
-        lines = f.readlines()
-    return lines
 
 
 def get_value(codes):

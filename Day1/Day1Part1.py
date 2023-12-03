@@ -1,7 +1,4 @@
-def read_from_file(filename):
-    with open(filename, 'r') as f:
-        lines = f.readlines()
-    return lines
+from CommonTools.DataReader import read_from_file
 
 def get_digits(code):
     output = ""
